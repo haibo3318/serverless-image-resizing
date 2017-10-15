@@ -31,7 +31,7 @@ exports.handler = function(event, context, callback) {
     )
     .then(() => callback(null, {
         statusCode: '301',
-        headers: {'location': `${URL}/${key}`, 'Access-Control-Allow-Origin': '*'},
+        headers: {'location': `${URL}/${key}`, 'Access-Control-Allow-Origin': '*', 'access-control-allow-methods': 'GET', 'access-control-max-age': '3000'},
         body: '',
       })
     )
